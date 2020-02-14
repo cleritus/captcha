@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Captcha</title>
+  <link rel="stylesheet" href="/css/captcha.css">
 
   <style>
     body {
@@ -18,13 +19,14 @@
       text-align: center;
     }
 
+
     form {
       margin: 30px;
       padding: 20px;
       background-color: #fff;
     }
 
-    input {
+    .input-form {
       margin: 10px;
       padding: 10px 0;
       text-indent: 10px;
@@ -32,7 +34,10 @@
       box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.363);
     }
 
-    button {
+
+    .submit-btn {
+      display: none;
+      width: 100%;
       margin: 10px;
       padding: 10px;
       background-color: cornflowerblue;
@@ -40,35 +45,6 @@
       cursor: pointer;
       border: none;
       border-radius: 5px;
-    }
-
-    .captcha-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-    }
-
-    #captcha-input {
-      width: 150px;
-      padding: 10px;
-      margin: 10px;
-    }
-
-    #captcha-label {
-      width: 150px;
-      padding: 10px;
-      margin: 10px;
-      border: 1px solid cornflowerblue;
-      border-radius: 3px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .submit-btn {
-      display: none;
-      width: 100%;
     }
   </style>
 </head>
@@ -79,7 +55,7 @@
 
     <form action="">
       <div>
-        <input type="text" placeholder="form data..." required autofocus>
+        <input class="input-form" type="text" placeholder="form data..." required autofocus>
       </div>
 
       <div class="captcha-container">
@@ -93,7 +69,7 @@
     </form>
   </div>
 
-  <script src="main.js"> </script>
+  <script src="/js/captcha.js"> </script>
 </body>
 
 </html>

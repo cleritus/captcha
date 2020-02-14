@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captcha</title>
+
+  <style>
+    body {
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: 'Open sans', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      margin: 30px;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    input {
+      margin: 10px;
+      padding: 10px 0;
+      text-indent: 10px;
+      border: none;
+      box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.363);
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px;
+      background-color: cornflowerblue;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .captcha-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+
+    #captcha-input {
+      width: 150px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #captcha-label {
+      width: 150px;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid cornflowerblue;
+      border-radius: 3px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .submit-btn {
+      display: none;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Captcha</h1>
+
+    <form action="">
+      <div>
+        <input type="text" placeholder="form data..." required autofocus>
+      </div>
+
+      <div class="captcha-container">
+        <label id="captcha-label" for="captcha-input"></label>
+        <input id="captcha-input" type="text" required maxlength="4" placeholder="type characters above">
+        <button id="captcha-btn">Im not a robot</button>
+      </div>
+
+      <button type="submit" class="submit-btn">Send</button>
+
+    </form>
+  </div>
+
+  <script src="main.js"> </script>
+</body>
+
+</html>
